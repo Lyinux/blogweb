@@ -1,17 +1,19 @@
-/* General Reset */
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Set a default font for the body */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Container */
+/* Container to center content and provide padding */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -19,7 +21,7 @@ body {
     padding: 20px;
 }
 
-/* Header */
+/* Header styles */
 header {
     background-color: #333;
     color: white;
@@ -28,7 +30,8 @@ header {
 
 header h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 nav ul {
@@ -45,10 +48,11 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
+    text-transform: uppercase;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #f39c12;
 }
 
 /* Hero Section */
@@ -56,139 +60,157 @@ nav ul li a:hover {
     background-color: #3498db;
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
 #hero h2 {
     font-size: 2.5em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-/* Blog Section */
-#blog h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+#hero p {
+    font-size: 1.2em;
+}
+
+/* Blog Posts Section */
+#blog {
+    background-color: #fff;
+    padding: 40px 0;
     text-align: center;
 }
 
+#blog h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
 .posts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
 }
 
-.posts article {
-    width: 45%;
-    margin-bottom: 30px;
-    background-color: white;
+article {
+    background-color: #ecf0f1;
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.posts article h3 {
+article:hover {
+    transform: translateY(-10px);
+}
+
+article h3 {
     font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-.posts article p.date {
-    font-size: 0.9em;
-    color: #888;
     margin-bottom: 10px;
 }
 
-.posts article a {
+article p.date {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+article a {
     color: #3498db;
     text-decoration: none;
     font-weight: bold;
 }
 
-.posts article a:hover {
-    text-decoration: underline;
+article a:hover {
+    color: #e67e22;
 }
 
-/* Subscription Section */
+/* Subscribe Section */
 #subscribe {
-    background-color: #ecf0f1;
+    background-color: #34495e;
+    color: white;
     padding: 40px 20px;
     text-align: center;
 }
 
 #subscribe h2 {
-    font-size: 2.2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-#subscribe form {
-    display: inline-block;
-    max-width: 500px;
+#subscription-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-#subscribe input[type="email"] {
-    padding: 10px;
+#subscription-form input {
+    padding: 15px;
     font-size: 1em;
-    width: 80%;
+    width: 300px;
+    border: none;
     border-radius: 5px;
-    border: 1px solid #ccc;
 }
 
-#subscribe button {
-    padding: 10px 20px;
-    background-color: #2ecc71;
+#subscription-form button {
+    padding: 15px 20px;
+    font-size: 1.1em;
+    background-color: #e67e22;
     color: white;
-    font-size: 1em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 18%;
 }
 
-#subscribe button:hover {
-    background-color: #27ae60;
+#subscription-form button:hover {
+    background-color: #d35400;
 }
 
 /* Contact Section */
 #contact {
+    background-color: #ecf0f1;
     padding: 40px 20px;
-    background-color: #fff;
+    text-align: center;
 }
 
 #contact h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 #contact form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
 #contact input, #contact textarea {
-    width: 100%;
-    max-width: 600px;
     padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
     font-size: 1em;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 #contact button {
-    background-color: #3498db;
-    color: white;
     padding: 15px 20px;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    background-color: #2ecc71;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 #contact button:hover {
-    background-color: #2980b9;
+    background-color: #27ae60;
 }
 
-/* Footer */
+/* Footer Section */
 footer {
     background-color: #333;
     color: white;
