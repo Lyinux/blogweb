@@ -3,48 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Landing page for a product or service">
-    <title>Simple Landing Page</title>
+    <meta name="description" content="Threads of Life Blog - A collection of stories, experiences, and insights across various topics.">
+    <meta name="author" content="Threads of Life">
+    <title>Threads of Life Blog</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Main content of the landing page -->
-    <section class="hero">
+    <header>
         <div class="container">
-            <h1>Welcome to Our Service!</h1>
-            <p>Your solution to a better tomorrow. Sign up now and get started.</p>
-            <a href="#signup" class="cta-button">Get Started</a>
+            <h1>Threads of Life</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Welcome to the Threads of Life Blog</h2>
+            <p>Join us as we explore various topics, from personal stories to lifestyle, and everything in between. Stay updated and inspired!</p>
         </div>
     </section>
 
-    <section class="features">
+    <section id="blog">
         <div class="container">
-            <h2>Why Choose Us?</h2>
-            <ul>
-                <li>Feature 1</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-            </ul>
+            <h2>Latest Posts</h2>
+            <div class="posts">
+                <article>
+                    <h3>Exploring the Beauty of Nature</h3>
+                    <p class="date">Posted on October 1, 2024</p>
+                    <p>Nature has always been a source of inspiration. In this post, we explore the most beautiful places on Earth and how nature helps us reconnect...</p>
+                    <a href="#">Read More</a>
+                </article>
+
+                <article>
+                    <h3>Understanding Mental Health in the Modern World</h3>
+                    <p class="date">Posted on September 15, 2024</p>
+                    <p>In this post, we dive deep into mental health awareness, focusing on how society has shifted in its understanding and how to stay mentally healthy...</p>
+                    <a href="#">Read More</a>
+                </article>
+
+                <!-- More blog posts can go here -->
+            </div>
         </div>
     </section>
 
-    <section id="signup" class="signup-form">
+    <section id="subscribe">
         <div class="container">
-            <h2>Sign Up</h2>
-            <form id="signupForm" action="/submit-form" method="POST">
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <button type="submit" class="cta-button">Sign Up</button>
+            <h2>Subscribe for Updates</h2>
+            <form id="subscription-form" action="#" method="post">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have questions or feedback? Reach out to us below:</p>
+            <form action="#" method="post">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Simple Landing Page</p>
+            <p>&copy; 2024 Threads of Life Blog. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Link to JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
