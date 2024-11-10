@@ -5,15 +5,13 @@
     box-sizing: border-box;
 }
 
-/* Body and font settings */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Container to center content */
+/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -21,145 +19,179 @@ body {
     padding: 20px;
 }
 
-/* Hero Section */
-.hero {
-    background-color: #3498db;
+/* Header */
+header {
+    background-color: #333;
     color: white;
-    padding: 80px 20px;
-    text-align: center;
+    padding: 20px 0;
 }
 
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s forwards;
-    animation-delay: 0.3s;
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s forwards;
-    animation-delay: 0.5s;
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
 }
 
-.cta-button {
-    background-color: #e67e22;
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
     color: white;
-    padding: 15px 30px;
     text-decoration: none;
     font-size: 1.2em;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
 }
 
-.cta-button:hover {
-    background-color: #d35400;
-    transform: scale(1.1);
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
-/* Features Section */
-.features {
+/* Hero Section */
+#hero {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
     padding: 40px 20px;
-    background-color: #fff;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Blog Section */
+#blog h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.features h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.features ul {
-    list-style-type: none;
+.posts article {
+    width: 45%;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.features li {
-    opacity: 0;
-    transform: translateY(10px);
-    animation: slideUp 0.6s forwards;
+.posts article h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.posts article p.date {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
 }
 
-@keyframes slideUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.posts article a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.features li:nth-child(1) {
-    animation-delay: 0.3s;
+.posts article a:hover {
+    text-decoration: underline;
 }
 
-.features li:nth-child(2) {
-    animation-delay: 0.6s;
-}
-
-.features li:nth-child(3) {
-    animation-delay: 0.9s;
-}
-
-/* Sign-Up Section */
-.signup-form {
+/* Subscription Section */
+#subscribe {
     background-color: #ecf0f1;
     padding: 40px 20px;
     text-align: center;
 }
 
-.signup-form form {
-    display: inline-block;
-    max-width: 400px;
-    width: 100%;
+#subscribe h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
 }
 
-.signup-form input {
-    width: 80%;
-    padding: 15px;
-    margin-bottom: 20px;
+#subscribe form {
+    display: inline-block;
+    max-width: 500px;
+}
+
+#subscribe input[type="email"] {
+    padding: 10px;
     font-size: 1em;
+    width: 80%;
     border-radius: 5px;
     border: 1px solid #ccc;
-    transition: all 0.3s ease;
 }
 
-.signup-form input:focus {
-    border-color: #2ecc71;
-    box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
-}
-
-.signup-form button {
+#subscribe button {
+    padding: 10px 20px;
     background-color: #2ecc71;
     color: white;
-    padding: 15px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 18%;
+}
+
+#subscribe button:hover {
+    background-color: #27ae60;
+}
+
+/* Contact Section */
+#contact {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+#contact button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 20px;
     font-size: 1.2em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 80%;
 }
 
-.signup-form button:hover {
-    background-color: #27ae60;
+#contact button:hover {
+    background-color: #2980b9;
 }
 
 /* Footer */
 footer {
-    background-color: #34495e;
+    background-color: #333;
     color: white;
     padding: 20px 0;
     text-align: center;
 }
-
-/* Media Query for Mobile and Tablets */
-@media (max-width:
